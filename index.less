@@ -104,10 +104,6 @@ atom-text-editor, :host {
     color: @green;
   }
 
-  &.name.function {
-    color: @green;
-  }
-
   &.name.instance {
     color: @blue;
   }
@@ -140,8 +136,24 @@ atom-text-editor, :host {
   color: @pink !important;
 }
 
-.meta.tag {
-  color: @syntax-text-color;
+.meta {
+  &.tag {
+    color: @syntax-text-color;
+  }
+  &.function {
+    color: @green;
+  }
+  &.function-call.with-arguments {
+    color: @green;
+  }
+  &.function-call.method.with-arguments,
+  &.function-call.method.without-arguments, {
+    color: @turquoise;
+  }
+  &.brace.round,
+  &.braces.round.function.arguments {
+    color: @pink;
+  }
 }
 
 .storage {
@@ -150,6 +162,17 @@ atom-text-editor, :host {
   &.type {
     font-style: italic;
     color: @blue;
+  }
+  &.type.js {
+    font-style: italic;
+    color: @pink;
+  }
+  &.type.function {
+    font-style: italic;
+    color: @pink;
+  }
+  &.type.variable {
+    color: @orange;
   }
 }
 
@@ -160,13 +183,21 @@ atom-text-editor, :host {
 .support {
   &.constant,
   &.function {
-    color: @blue;
+    color: @ghost-white;
   }
 
   &.class,
   &.type {
     font-style: italic;
     color: @blue;
+  }
+  &.type.object.module {
+    font-style: normal;
+    color: @ghost-white;
+  }
+  &.class.builtin {
+    font-style: normal;
+    color: @ghost-white;
   }
 }
 
@@ -179,8 +210,18 @@ atom-text-editor, :host {
   // 'self' Python
   &.language.python,
   // 'this' Javascript
+
   &.language.js {
     color: @pink;
+  }
+  &.other.readwrite {
+    color: @blue;
+  }
+  &.other.object {
+    color: @light-green;
+  }
+  &.other.property {
+    color: @salmon;
   }
 }
 
