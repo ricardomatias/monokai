@@ -144,25 +144,40 @@ atom-text-editor, :host {
   &.tag {
     color: @syntax-text-color;
   }
+
   &.function {
     color: @green;
   }
+
   &.function.static {
-    color: @turquoise;
+    color: @ghost-white;
   }
+
+  &.prototype.function {
+    color: @ghost-white;
+  }
+
   &.function.json {
     color: @ghost-white;
   }
+
   &.function-call.with-arguments {
     color: @green;
   }
+
   &.function-call.without-arguments {
     color: @green;
   }
+
+  &.function-call.static.with-arguments, {
+    color: @turquoise;
+  }
+
   &.function-call.method.with-arguments,
   &.function-call.method.without-arguments, {
     color: @turquoise;
   }
+
   &.brace.round,
   &.braces.round.function.arguments {
     color: @pink;
@@ -191,6 +206,10 @@ atom-text-editor, :host {
 
 .string {
   color: @yellow;
+
+  &.unquoted {
+    color: @salmon;
+  }
 }
 
 .support {
@@ -208,14 +227,17 @@ atom-text-editor, :host {
     font-style: italic;
     color: @blue;
   }
+
   &.type.object.module {
     font-style: normal;
     color: @ghost-white;
   }
+
   &.type.object.dom {
     font-style: normal;
     color: @ghost-white;
   }
+
   &.class.builtin {
     font-style: normal;
     color: @ghost-white;
@@ -236,8 +258,16 @@ atom-text-editor, :host {
     color: @blue;
   }
 
+  &.type.variable {
+    color: @orange;
+  }
+
   &.other.readwrite {
     color: @blue;
+  }
+
+  &.other.class {
+    color: @dark-blue;
   }
 
   &.other.object {
@@ -250,6 +280,12 @@ atom-text-editor, :host {
 
   &.other.constant {
     color: @purple;
+  }
+}
+
+.punctuation {
+  &.definition.parameters {
+    color: @ghost-white;
   }
 }
 
