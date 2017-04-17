@@ -149,32 +149,22 @@ atom-text-editor {
     color: @green;
   }
 
-  &.syntax--function.syntax--static {
-    color: @ghost-white;
-  }
-
+  &.syntax--delimiter.syntax--comma,
+  &.syntax--function.syntax--static,
+  &.syntax--brace.syntax--curly,
+  &.syntax--brace.syntax--square,
+  &.syntax--function.syntax--json,
   &.syntax--prototype.syntax--function {
     color: @ghost-white;
   }
 
-  &.syntax--function.syntax--json {
-    color: @ghost-white;
-  }
-
+  &.syntax--function-call.syntax--without-arguments,
   &.syntax--function-call.syntax--with-arguments {
     color: @green;
   }
 
-  &.syntax--function-call.syntax--without-arguments {
-    color: @green;
-  }
-
-  &.syntax--function-call.syntax--static.syntax--with-arguments, {
-    color: @turquoise;
-  }
-
-  &.syntax--function-call.syntax--method.syntax--with-arguments,
-  &.syntax--function-call.syntax--method.syntax--without-arguments, {
+  &.syntax--method-call.syntax--with-arguments,
+  &.syntax--method-call.syntax--without-arguments {
     color: @turquoise;
   }
 
@@ -191,11 +181,9 @@ atom-text-editor {
     font-style: italic;
     color: @blue;
   }
+
+  &.syntax--type.syntax--function,
   &.syntax--type.syntax--js {
-    font-style: italic;
-    color: @pink;
-  }
-  &.syntax--type.syntax--function {
     font-style: italic;
     color: @pink;
   }
@@ -228,16 +216,9 @@ atom-text-editor {
     color: @blue;
   }
 
-  &.syntax--type.syntax--object.syntax--module {
-    font-style: normal;
-    color: @ghost-white;
-  }
 
-  &.syntax--type.syntax--object.syntax--dom {
-    font-style: normal;
-    color: @ghost-white;
-  }
-
+  &.syntax--type.syntax--object.syntax--dom,
+  &.syntax--type.syntax--object.syntax--module,
   &.syntax--class.syntax--builtin {
     font-style: normal;
     color: @ghost-white;
@@ -284,6 +265,9 @@ atom-text-editor {
 }
 
 .syntax--punctuation {
+
+  &.syntax--terminator,
+  &.syntax--separator,
   &.syntax--definition.syntax--parameters {
     color: @ghost-white;
   }
