@@ -108,7 +108,8 @@ atom-text-editor {
     color: @blue;
   }
 
-  &.syntax--name.syntax--tag {
+  &.syntax--name.syntax--tag,
+  &.syntax--name.syntax--tag.syntax--close  {
     color: @pink;
   }
 
@@ -216,6 +217,10 @@ atom-text-editor {
     color: @blue;
   }
 
+
+  &.syntax--class.syntax--component {
+    color: @pink;
+  }
 
   &.syntax--type.syntax--object.syntax--dom,
   &.syntax--type.syntax--object.syntax--module,
